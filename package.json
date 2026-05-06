@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "demo"
   ],
   "scripts": {
     "icons:download": "tsx scripts/download.ts",
@@ -13,7 +14,8 @@
     "icons:pipeline": "npm run icons:download && npm run icons:cleanup && npm run icons:optimize && npm run icons:generate",
     "build:packages": "npm run build --workspaces --if-present",
     "test": "vitest run",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "demo": "npm run dev --workspace=demo"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",

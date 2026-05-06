@@ -18,7 +18,7 @@
       "types": "./dist/aws/index.d.ts",
       "import": "./dist/aws/index.js",
       "require": "./dist/aws/index.cjs"
-    },
+    }
   },
   "files": [
     "dist"

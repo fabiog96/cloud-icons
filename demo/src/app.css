@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-surface-0: #0a0e17;
+  --color-surface-1: #0f1520;
+  --color-surface-2: #151c2b;
+  --color-surface-3: #1b2436;
+  --color-surface-4: #222d42;
+
+  --color-border-dim: #1e2a3e;
+  --color-border-default: #283650;
+  --color-border-bright: #3a4e6e;
+
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #8b9ab8;
+  --color-text-muted: #556480;
+
+  --color-accent: #38bdf8;
+  --color-accent-dim: #1e6fa0;
+  --color-accent-glow: rgba(56, 189, 248, 0.12);
+
+  --color-success: #34d399;
+  --color-aws: #ff9900;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-surface-4) transparent;
+}
+
+body {
+  background: var(--color-surface-0);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.3); }
+  70% { box-shadow: 0 0 0 6px rgba(56, 189, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
