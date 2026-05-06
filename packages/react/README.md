@@ -51,8 +51,6 @@ All icons accept standard SVG props plus:
 ## Related packages
 
 - [@cloud-icons/core](https://www.npmjs.com/package/@cloud-icons/core) — Framework-agnostic SVG content
-- [@cloud-icons/vue](https://www.npmjs.com/package/@cloud-icons/vue) — Vue components
-- [@cloud-icons/angular](https://www.npmjs.com/package/@cloud-icons/angular) — Angular components
 - [@cloud-icons/svg](https://www.npmjs.com/package/@cloud-icons/svg) — Optimized SVG files
 
 ## License

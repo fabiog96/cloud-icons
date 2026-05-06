@@ -36,8 +36,6 @@ Or copy the files from `node_modules/@cloud-icons/svg/` into your project.
 
 - [@cloud-icons/core](https://www.npmjs.com/package/@cloud-icons/core) — Framework-agnostic SVG content
 - [@cloud-icons/react](https://www.npmjs.com/package/@cloud-icons/react) — React components
-- [@cloud-icons/vue](https://www.npmjs.com/package/@cloud-icons/vue) — Vue components
-- [@cloud-icons/angular](https://www.npmjs.com/package/@cloud-icons/angular) — Angular components
 
 ## License
 

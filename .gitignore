@@ -10,6 +10,9 @@ dist/
 .vscode/
 .idea/
 
+# docs (internal notes, not published)
+docs/
+
 # env
 .env
 .env.*

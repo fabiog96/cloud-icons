@@ -37,8 +37,6 @@ document.getElementById("icon").innerHTML = `
 ## Related packages
 
 - [@cloud-icons/react](https://www.npmjs.com/package/@cloud-icons/react) — React components
-- [@cloud-icons/vue](https://www.npmjs.com/package/@cloud-icons/vue) — Vue components
-- [@cloud-icons/angular](https://www.npmjs.com/package/@cloud-icons/angular) — Angular components
 - [@cloud-icons/svg](https://www.npmjs.com/package/@cloud-icons/svg) — Optimized SVG files
 
 ## License

@@ -19,16 +19,6 @@
       "import": "./dist/aws/index.js",
       "require": "./dist/aws/index.cjs"
     },
-    "./azure": {
-      "types": "./dist/azure/index.d.ts",
-      "import": "./dist/azure/index.js",
-      "require": "./dist/azure/index.cjs"
-    },
-    "./gcp": {
-      "types": "./dist/gcp/index.d.ts",
-      "import": "./dist/gcp/index.js",
-      "require": "./dist/gcp/index.cjs"
-    },
     "./metadata": {
       "types": "./dist/metadata.d.ts",
       "import": "./dist/metadata.js",
