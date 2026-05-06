@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.raw-svgs/
+
+*.tsbuildinfo
+*.log
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# env
+.env
+.env.*
