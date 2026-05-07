@@ -1,0 +1,11 @@
+import { createIcon } from "../icon-base";
+
+export const GcpAutomlNaturalLanguage = createIcon(
+  "GcpAutomlNaturalLanguage",
+  "0 0 24 24",
+  () => (
+    <>
+      <g fill="#4285F4" fillRule="evenodd"><path d="M14.937 17.056H8.303l-.832 1.44.832 1.44H16.6l4.15-7.186-1.663-2.881zM7.4 4l-4.15 7.187 1.664 2.88 4.149-7.186h6.634l.832-1.44L15.697 4z"/><path d="M9.77 10.555h4.46V9.356H9.77zm0 2.214h4.46V11.57H9.77zm0 2.227h4.46v-1.198H9.77z"/></g>
+    </>
+  ),
+);

@@ -8,6 +8,9 @@ const config: Config = {
       params: {
         overrides: {
           removeViewBox: false,
+          inlineStyles: {
+            onlyMatchedOnce: false,
+          },
         },
       },
     },

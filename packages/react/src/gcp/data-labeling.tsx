@@ -1,0 +1,11 @@
+import { createIcon } from "../icon-base";
+
+export const GcpDataLabeling = createIcon(
+  "GcpDataLabeling",
+  "0 0 24 24",
+  () => (
+    <>
+      <g data-name="Product Icons"><path d="M20 4H7.7a1.12 1.12 0 0 0-1 .63L3 12h2l3-6h11v1h2V5a1 1 0 0 0-1-1" style={{fill:"#a6cafd"}}/><circle cx="10" cy="12" r="3" style={{fill:"#559cfc"}}/><circle cx="10" cy="12" r="1" style={{fill:"#fff"}}/><path d="M0 0h8v1H0z" style={{fill:"#fff"}}/><rect width="5" height="2" x="17" y="8" rx="1" style={{fill:"#669df6"}}/><rect width="8" height="2" x="14" y="11" rx="1" style={{fill:"#669df6"}}/><rect width="5" height="2" x="17" y="14" rx="1" style={{fill:"#669df6"}}/><path d="M19 17v1H8l-2-4H4l2.69 5.37a1.12 1.12 0 0 0 1 .63H20a1 1 0 0 0 1-1v-2Z" style={{fill:"#a6cafd"}}/><path d="M10 12H2" style={{fill:"none",stroke:"#2683fb",strokeMiterlimit:"10"}}/></g>
+    </>
+  ),
+);

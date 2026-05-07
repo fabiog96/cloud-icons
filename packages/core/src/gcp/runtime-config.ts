@@ -1,0 +1,2 @@
+export const gcpRuntimeConfigSvg = `<g data-name="Product Icons"><path d="M2 8h6V2H2z" style="fill:#aecbfa"/><path d="M7 4h13v2H7z" style="fill:#4285f4"/><path d="M0 0h24v24H0z" style="fill:none"/><path d="M15 13H3v-3h12zm-2 7H3v-4h10z" style="fill:#aecbfa"/><path d="M5 8h3V2H5z" style="fill:#4285f4"/><path d="M16 22h6v-6h-6z" data-name="Fill-11" style="fill:#aecbfa"/><path d="M19 22h3v-6h-3z" data-name="Fill-15" style="fill:#4285f4"/><path d="M18 4h2v12h-2z" style="fill:#4285f4"/></g>`;
+export const gcpRuntimeConfigViewBox = "0 0 24 24";

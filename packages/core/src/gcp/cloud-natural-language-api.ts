@@ -1,0 +1,2 @@
+export const gcpCloudNaturalLanguageApiSvg = `<g data-name="Product Icons"><path d="M20 5h-3v2h3v12h-3v2h5V5z" style="fill:#669df6"/><path d="m20 8 2-1h-2zm2 10-2 1h2z" style="fill:#4285f4"/><path d="M4 21h3v-2H4V7h3V5H2v16z" style="fill:#669df6"/><path d="m2 18 2 1H2zM4 8 2 7h2z" data-name="Shape" style="fill:#4285f4"/><path d="M7 12h10v2H7z" style="fill:#aecbfa"/><path d="M7 15h10v2H7zm0-6h10v2H7z" data-name="Rectangle-7-Copy" style="fill:#aecbfa"/></g>`;
+export const gcpCloudNaturalLanguageApiViewBox = "0 0 24 24";

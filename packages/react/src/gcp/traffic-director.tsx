@@ -1,0 +1,11 @@
+import { createIcon } from "../icon-base";
+
+export const GcpTrafficDirector = createIcon(
+  "GcpTrafficDirector",
+  "0 0 24 24",
+  () => (
+    <>
+      <g data-name="Product Icons"><path d="M9 15a6.22 6.22 0 0 0-4-5V8a8.22 8.22 0 0 1 6 7Z" style={{fill:"#4285f4"}}/><g data-name="colored-32/traffic-director"><path d="M5 7v4L2 9Zm6 8.39V18H9v-2.62" style={{fill:"#4285f4"}}/><path d="M9 5H8l2-3 2 3h-1v13H9Z" data-name="Combined-Shape" style={{fill:"#669df6"}}/></g><g data-name="colored-32/traffic-director"><path d="M19 17v-4l3 2Zm-6-8.38V6h2v2.62" data-name="Combined-Shape" style={{fill:"#aecbfa"}}/><path d="M15 19h1l-2 3-2-3h1V6h2Z" data-name="Combined-Shape" style={{fill:"#669df6"}}/></g><path d="M13 6h2v2.43A6.13 6.13 0 0 0 19 14v2a8.15 8.15 0 0 1-6-7.58" style={{fill:"#aecbfa"}}/></g>
+    </>
+  ),
+);

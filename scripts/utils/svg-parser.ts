@@ -84,5 +84,22 @@ export function svgToJsx(innerContent: string): string {
     jsx = jsx.replace(regex, `<${tag}$1 />`);
   }
 
+  // Convert style="fill:#abc;fill-rule:evenodd" to style={{fill:"#abc",fillRule:"evenodd"}}
+  jsx = jsx.replace(/style="([^"]+)"/g, (_match, cssString: string) => {
+    const props = cssString
+      .split(";")
+      .filter(Boolean)
+      .map((prop) => {
+        const [key, ...valueParts] = prop.split(":");
+        const value = valueParts.join(":").trim();
+        const jsxKey = key
+          .trim()
+          .replace(/-([a-z])/g, (_m, c: string) => c.toUpperCase());
+        return `${jsxKey}:"${value}"`;
+      })
+      .join(",");
+    return `style={{${props}}}`;
+  });
+
   return jsx;
 }

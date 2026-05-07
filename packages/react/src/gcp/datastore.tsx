@@ -1,0 +1,11 @@
+import { createIcon } from "../icon-base";
+
+export const GcpDatastore = createIcon(
+  "GcpDatastore",
+  "0 0 24 24",
+  () => (
+    <>
+      <g data-name="Product Icons"><path d="m7 6 1-1H2l1 1z" style={{fill:"#aecbfa"}}/><path d="M7 6v4l1 1V5z" style={{fill:"#669df6"}}/><path d="M3 6 2 5v6l1-1z" style={{fill:"#aecbfa"}}/><path d="m3 10-1 1h6l-1-1z" style={{fill:"#4285f4"}}/><path d="M3 6h4v4H3z" style={{fill:"#aecbfa"}}/><path d="m14 6 1-1H9l1 1z" style={{fill:"#4285f4"}}/><path d="M14 6v4l1 1V5z" style={{fill:"#aecbfa"}}/><path d="M10 6 9 5v6l1-1z" style={{fill:"#4285f4"}}/><path d="m10 10-1 1h6l-1-1z" style={{fill:"#aecbfa"}}/><path d="M10 6h4v4h-4z" style={{fill:"#fff"}}/><path d="m21 6 1-1h-6l1 1z" style={{fill:"#4285f4"}}/><path d="M21 6v4l1 1V5z" style={{fill:"#aecbfa"}}/><path d="m17 6-1-1v6l1-1z" style={{fill:"#4285f4"}}/><path d="m17 10-1 1h6l-1-1z" style={{fill:"#aecbfa"}}/><path d="M17 6h4v4h-4z" style={{fill:"#fff"}}/><path d="m7 14 1-1H2l1 1z" style={{fill:"#4285f4"}}/><path d="M7 14v4l1 1v-6z" style={{fill:"#aecbfa"}}/><path d="m3 14-1-1v6l1-1z" style={{fill:"#4285f4"}}/><path d="m3 18-1 1h6l-1-1z" style={{fill:"#aecbfa"}}/><path d="M3 14h4v4H3z" style={{fill:"#fff"}}/><path d="m14 14 1-1H9l1 1z" style={{fill:"#aecbfa"}}/><path d="M14 14v4l1 1v-6z" style={{fill:"#669df6"}}/><path d="m10 14-1-1v6l1-1z" style={{fill:"#aecbfa"}}/><path d="m10 18-1 1h6l-1-1z" style={{fill:"#4285f4"}}/><path d="M10 14h4v4h-4zm11 0 1-1h-6l1 1z" style={{fill:"#aecbfa"}}/><path d="M21 14v4l1 1v-6z" style={{fill:"#669df6"}}/><path d="m17 14-1-1v6l1-1z" style={{fill:"#aecbfa"}}/><path d="m17 18-1 1h6l-1-1z" style={{fill:"#4285f4"}}/><path d="M17 14h4v4h-4z" style={{fill:"#aecbfa"}}/></g>
+    </>
+  ),
+);

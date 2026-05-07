@@ -1,0 +1,11 @@
+import { createIcon } from "../icon-base";
+
+export const GcpComputeEngine = createIcon(
+  "GcpComputeEngine",
+  "0 0 24 24",
+  () => (
+    <>
+      <g data-name="Product Icons"><path d="M9 9h6v6H9z" style={{fill:"#aecbfa"}}/><path d="M11 2h2v4h-2zM7 2h2v4H7zm8 0h2v4h-2z" style={{fill:"#669df6"}}/><path d="M11 18h2v4h-2zm-4 0h2v4H7zm8 0h2v4h-2z" style={{fill:"#4285f4"}}/><path d="M19 10h2v4h-2z" style={{fill:"#4285f4"}} transform="rotate(-90 20 12)"/><path d="M19 14h2v4h-2z" style={{fill:"#4285f4"}} transform="rotate(-90 20 16)"/><path d="M19 6h2v4h-2z" style={{fill:"#4285f4"}} transform="rotate(-90 20 8)"/><path d="M3 10h2v4H3z" style={{fill:"#669df6"}} transform="rotate(-90 4 12)"/><path d="M3 14h2v4H3z" style={{fill:"#669df6"}} transform="rotate(-90 4 16)"/><path d="M3 6h2v4H3z" style={{fill:"#669df6"}} transform="rotate(-90 4 8)"/><path d="M5 5v14h14V5Zm12 12H7V7h10Z" style={{fill:"#aecbfa"}}/><path d="M9 15h6l-3-3z" style={{fill:"#669df6"}}/><path d="m12 12 3 3V9z" style={{fill:"#4285f4"}}/></g>
+    </>
+  ),
+);

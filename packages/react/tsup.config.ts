@@ -19,6 +19,6 @@ export default defineConfig({
   clean: true,
   splitting: false,
   treeshake: true,
-  external: ["react", "@cloud-icons/core"],
+  external: ["react"],
   jsx: "automatic",
 });
