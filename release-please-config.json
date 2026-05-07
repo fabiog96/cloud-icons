@@ -1,0 +1,16 @@
+{
+  "release-type": "node",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "packages": {
+    "packages/core": {                                                                                                                                                                        
+        "component": "core"                                                                                                                                                                     
+      },                                                                                                                                                                                        
+      "packages/react": {                                                                                                                                                                       
+        "component": "react"                                                                                                                                                                 
+      },                                 
+      "packages/svg": {                         
+        "component": "svg"      
+      }                
+  }
+}
