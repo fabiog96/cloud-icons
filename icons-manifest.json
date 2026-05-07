@@ -4,5 +4,17 @@
     "version": "Q1-2026",
     "lastUpdated": "2026-01-30",
     "sha256": "9a2e0ae9ba10b785cfb080913ecf66eee293d614b4556723d5640f36cd5e08df"
+  },
+  "azure": {
+    "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V23.zip",
+    "version": "V23",
+    "lastUpdated": "2025-11-06",
+    "sha256": "45fe30b7d2868b1c7eaa76261885e0e36d7534d67fd283fa83a300a6b7afcf1a"
+  },
+  "gcp": {
+    "url": "https://cloud.google.com/static/icons/files/google-cloud-icons.zip",
+    "version": "2021-10",
+    "lastUpdated": "2021-10-15",
+    "sha256": "a6d9d7921758042538b462f03cf64614c2cebd96743b3ed63580a769fc7de3e9"
   }
 }

@@ -2,13 +2,15 @@ import { copyFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from "node
 import { join } from "node:path";
 
 import { aws } from "./providers/aws";
+import { azure } from "./providers/azure";
+import { gcp } from "./providers/gcp";
 import type { ProviderConfig } from "./providers/types";
 import { dedup } from "./utils/naming";
 
 const ROOT = join(import.meta.dirname, "..");
 const RAW_DIR = join(ROOT, ".raw-svgs");
 
-const PROVIDERS: ProviderConfig[] = [aws];
+const PROVIDERS: ProviderConfig[] = [aws, azure, gcp];
 
 function cleanupProvider(provider: ProviderConfig): void {
   const providerDir = join(RAW_DIR, provider.name);

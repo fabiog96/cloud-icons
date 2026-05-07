@@ -75,7 +75,7 @@ export const aws: ProviderConfig = {
         // Remove "Amazon-" and "AWS-" prefixes
         .replace(/^(Amazon|AWS)-?/, "")
         // Remove special characters (dots, ampersands, etc.)
-        .replace(/[.&'(),]/g, "")
+        .replace(/[.&'(),+]/g, "")
         // Convert to kebab-case
         .replace(/[_\s]+/g, "-")
         .replace(/([a-z])([A-Z])/g, "$1-$2")

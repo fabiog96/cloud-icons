@@ -1,0 +1,8 @@
+packages/core/src/aws/** linguist-generated=true
+packages/core/src/azure/** linguist-generated=true
+packages/core/src/gcp/** linguist-generated=true
+packages/core/src/metadata.ts linguist-generated=true
+packages/react/src/aws/** linguist-generated=true
+packages/react/src/azure/** linguist-generated=true
+packages/react/src/gcp/** linguist-generated=true
+packages/svg/** linguist-generated=true

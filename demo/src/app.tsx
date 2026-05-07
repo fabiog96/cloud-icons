@@ -11,21 +11,52 @@ import {
 } from "react";
 
 import * as AwsIcons from "@cloud-icons/react/aws";
+import * as AzureIcons from "@cloud-icons/react/azure";
+import * as GcpIcons from "@cloud-icons/react/gcp";
+
+type Provider = "all" | "aws" | "azure" | "gcp";
 
 type IconEntry = {
   name: string;
   shortName: string;
+  provider: Provider;
+  importPath: string;
   component: ComponentType<{ size?: number; color?: string }>;
 };
 
-const allIcons: IconEntry[] = Object.entries(AwsIcons)
-  .filter(([, value]) => typeof value === "object" || typeof value === "function")
-  .map(([name, component]) => ({
-    name,
-    shortName: name.replace(/^Aws/, ""),
-    component: component as IconEntry["component"],
-  }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+function loadIcons(
+  icons: Record<string, unknown>,
+  provider: "aws" | "azure" | "gcp",
+  prefix: string,
+): IconEntry[] {
+  return Object.entries(icons)
+    .filter(([, value]) => typeof value === "object" || typeof value === "function")
+    .map(([name, component]) => ({
+      name,
+      shortName: name.replace(new RegExp(`^${prefix}`), ""),
+      provider,
+      importPath: `@cloud-icons/react/${provider}`,
+      component: component as IconEntry["component"],
+    }));
+}
+
+const allIcons: IconEntry[] = [
+  ...loadIcons(AwsIcons, "aws", "Aws"),
+  ...loadIcons(AzureIcons, "azure", "Azure"),
+  ...loadIcons(GcpIcons, "gcp", "Gcp"),
+].sort((a, b) => a.name.localeCompare(b.name));
+
+const PROVIDER_COLORS: Record<string, string> = {
+  aws: "#FF9900",
+  azure: "#0078D4",
+  gcp: "#4285F4",
+};
+
+const PROVIDER_COUNTS: Record<string, number> = {
+  aws: allIcons.filter((i) => i.provider === "aws").length,
+  azure: allIcons.filter((i) => i.provider === "azure").length,
+  gcp: allIcons.filter((i) => i.provider === "gcp").length,
+};
 
 function SearchIcon() {
   return (
@@ -82,23 +113,30 @@ export function App() {
   const [search, setSearch] = useState("");
   const [copied, setCopied] = useState<string | null>(null);
   const [selected, setSelected] = useState<IconEntry | null>(null);
+  const [activeProvider, setActiveProvider] = useState<Provider>("all");
   const searchRef = useRef<HTMLInputElement>(null);
 
   const filtered = useMemo(() => {
-    if (!search) return allIcons;
-    const lower = search.toLowerCase();
-    return allIcons.filter((icon) => icon.name.toLowerCase().includes(lower));
-  }, [search]);
+    let icons = allIcons;
+    if (activeProvider !== "all") {
+      icons = icons.filter((icon) => icon.provider === activeProvider);
+    }
+    if (search) {
+      const lower = search.toLowerCase();
+      icons = icons.filter((icon) => icon.name.toLowerCase().includes(lower));
+    }
+    return icons;
+  }, [search, activeProvider]);
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
 
-  const handleCopy = useCallback((name: string, e?: React.MouseEvent) => {
+  const handleCopy = useCallback((icon: IconEntry, e?: React.MouseEvent) => {
     e?.stopPropagation();
-    const importStr = `import { ${name} } from "@cloud-icons/react/aws";`;
+    const importStr = `import { ${icon.name} } from "${icon.importPath}";`;
     navigator.clipboard.writeText(importStr);
-    setCopied(name);
+    setCopied(icon.name);
     setTimeout(() => setCopied(null), 2000);
   }, []);
 
@@ -139,7 +177,7 @@ export function App() {
             <input
               ref={searchRef}
               type="text"
-              placeholder="Search 795 icons..."
+              placeholder={`Search ${allIcons.length} icons...`}
               value={search}
               onChange={handleSearch}
               className="w-full rounded-lg border border-[var(--color-border-dim)] bg-[var(--color-surface-0)] py-2 pl-10 pr-20 font-sans text-sm text-[var(--color-text-primary)] outline-none transition-colors placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-accent-dim)] focus:bg-[var(--color-surface-2)]"
@@ -150,12 +188,29 @@ export function App() {
             </div>
           </div>
 
-          <div className="hidden items-center gap-4 md:flex">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[var(--color-aws)]" />
-              <span className="font-sans text-xs text-[var(--color-text-secondary)]">AWS</span>
-              <span className="font-mono text-xs text-[var(--color-text-muted)]">{filtered.length}</span>
-            </div>
+          <div className="hidden items-center gap-1 md:flex">
+            {(["all", "aws", "azure", "gcp"] as const).map((p) => (
+              <button
+                key={p}
+                onClick={() => setActiveProvider(p)}
+                className={`flex items-center gap-1.5 rounded-md px-2.5 py-1.5 font-sans text-xs transition-colors ${
+                  activeProvider === p
+                    ? "bg-[var(--color-surface-3)] text-[var(--color-text-primary)]"
+                    : "text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]"
+                }`}
+              >
+                {p !== "all" && (
+                  <span
+                    className="h-2 w-2 rounded-full"
+                    style={{ backgroundColor: PROVIDER_COLORS[p] }}
+                  />
+                )}
+                <span>{p === "all" ? "All" : p.toUpperCase()}</span>
+                <span className="font-mono text-[10px] text-[var(--color-text-muted)]">
+                  {p === "all" ? allIcons.length : PROVIDER_COUNTS[p]}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
       </header>
@@ -196,14 +251,15 @@ export function App() {
           </div>
         ) : (
           <div className="grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
-            {filtered.map(({ name, shortName, component: Icon }, i) => {
+            {filtered.map((icon, i) => {
+              const { name, shortName, component: Icon, provider } = icon;
               const isCopied = copied === name;
               const isSelected = selected?.name === name;
 
               return (
                 <button
                   key={name}
-                  onClick={() => setSelected({ name, shortName, component: Icon })}
+                  onClick={() => setSelected(icon)}
                   style={{ animationDelay: `${Math.min(i * 8, 300)}ms` }}
                   className={`
                     group relative flex cursor-pointer flex-col items-center gap-2 rounded-lg border p-3 pb-2.5 transition-all
@@ -224,6 +280,10 @@ export function App() {
                   `}>
                     {isCopied ? "Copied!" : shortName}
                   </span>
+                  <span
+                    className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full opacity-60"
+                    style={{ backgroundColor: PROVIDER_COLORS[provider] }}
+                  />
                 </button>
               );
             })}
@@ -255,8 +315,14 @@ export function App() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <span className="rounded-full bg-[var(--color-aws)]/15 px-2.5 py-0.5 font-mono text-[10px] font-medium text-[var(--color-aws)]">
-                  AWS
+                <span
+                  className="rounded-full px-2.5 py-0.5 font-mono text-[10px] font-medium"
+                  style={{
+                    backgroundColor: `${PROVIDER_COLORS[selected.provider]}20`,
+                    color: PROVIDER_COLORS[selected.provider],
+                  }}
+                >
+                  {selected.provider.toUpperCase()}
                 </span>
                 <button
                   onClick={() => setSelected(null)}
@@ -289,11 +355,11 @@ export function App() {
                     <span className="text-[#c792ea]">import</span>{" "}
                     <span className="text-[var(--color-text-primary)]">{"{ "}{selected.name}{" }"}</span>{" "}
                     <span className="text-[#c792ea]">from</span>{" "}
-                    <span className="text-[var(--color-success)]">"@cloud-icons/react/aws"</span>
+                    <span className="text-[var(--color-success)]">"{selected.importPath}"</span>
                     <span className="text-[var(--color-text-muted)]">;</span>
                   </pre>
                   <button
-                    onClick={(e) => handleCopy(selected.name, e)}
+                    onClick={(e) => handleCopy(selected, e)}
                     className="absolute right-2 top-2 rounded-md border border-[var(--color-border-dim)] bg-[var(--color-surface-2)] p-1.5 text-[var(--color-text-muted)] opacity-0 transition-all hover:border-[var(--color-border-bright)] hover:text-[var(--color-text-secondary)] group-hover:opacity-100"
                   >
                     {copied === selected.name ? <CheckIcon /> : <CopyIcon />}
@@ -323,7 +389,7 @@ export function App() {
                 Press <kbd className="rounded border border-[var(--color-border-dim)] bg-[var(--color-surface-3)] px-1.5 py-0.5 font-mono text-[10px]">Esc</kbd> to close
               </span>
               <button
-                onClick={(e) => handleCopy(selected.name, e)}
+                onClick={(e) => handleCopy(selected, e)}
                 className="flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-4 py-2 font-sans text-xs font-medium text-[var(--color-surface-0)] transition-colors hover:bg-[var(--color-accent)]/90"
               >
                 {copied === selected.name ? <CheckIcon /> : <CopyIcon />}

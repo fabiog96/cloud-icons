@@ -1,0 +1,11 @@
+import { createIcon } from "../icon-base";
+
+export const GcpGenomics = createIcon(
+  "GcpGenomics",
+  "0 0 24 24",
+  () => (
+    <>
+      <g data-name="Product Icons"><circle cx="12" cy="12" r="1.6" style={{fill:"#aecbfa"}}/><path d="M7.58 9.2h6.37l.74-.7-.74-.7H7.58z" style={{fill:"#4285f4",fillRule:"evenodd"}}/><circle cx="6.8" cy="8.5" r="1.23" style={{fill:"#669df6"}}/><circle cx="17.2" cy="8.5" r="1.6" style={{fill:"#aecbfa"}}/><path d="m9.36 15.5.74.7h6.28v-1.4H10.1z" style={{fill:"#4285f4",fillRule:"evenodd"}}/><circle cx="6.8" cy="15.5" r="1.6" style={{fill:"#aecbfa"}}/><circle cx="17.2" cy="15.5" r="1.23" style={{fill:"#669df6"}}/><path d="M4.18 5h12.68l.74-.7-.74-.7H4.18z" style={{fill:"#4285f4",fillRule:"evenodd"}}/><circle cx="3.6" cy="4.3" r="1.23" style={{fill:"#669df6"}}/><circle cx="20.4" cy="4.3" r="1.6" style={{fill:"#aecbfa"}}/><path d="m6.4 19.7.74.7h12.7V19H7.14z" style={{fill:"#4285f4",fillRule:"evenodd"}}/><circle cx="3.6" cy="19.7" r="1.6" style={{fill:"#aecbfa"}}/><circle cx="20.4" cy="19.7" r="1.23" style={{fill:"#669df6"}}/></g>
+    </>
+  ),
+);

@@ -8,7 +8,7 @@ import svgoConfig from "../svgo.config";
 const ROOT = join(import.meta.dirname, "..");
 const RAW_DIR = join(ROOT, ".raw-svgs");
 
-const PROVIDERS = ["aws"];
+const PROVIDERS = ["aws", "azure", "gcp"];
 
 function optimizeProvider(providerName: string): void {
   const providerDir = join(RAW_DIR, providerName);
