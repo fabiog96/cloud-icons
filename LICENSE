@@ -2,6 +2,13 @@ MIT License
 
 Copyright (c) 2026 fabiog96
 
+Note: This license applies to the source code of the cloud-icons library
+(build scripts, component wrappers, pipeline tooling) only. SVG icon assets
+are property of their respective owners (Amazon Web Services, Microsoft,
+Google) and are subject to their individual terms of use.
+
+---
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

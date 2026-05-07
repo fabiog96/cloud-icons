@@ -92,9 +92,11 @@ npm run icons:generate    # Generate TS/TSX/SVG in packages
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](./LICENSE) — applies to the source code of this library (scripts, components, build pipeline) only.
 
-SVG icons are sourced from official provider asset packages and are subject to their respective licenses:
-- [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/)
-- [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/)
-- [Google Cloud Icons](https://cloud.google.com/icons)
+SVG icons are property of their respective owners and subject to their terms of use:
+- [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) — Amazon Web Services
+- [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/) — Microsoft
+- [Google Cloud Icons](https://cloud.google.com/icons) — Google
+
+The icons are provided for use in architecture diagrams, technical documentation, and presentations. This library does not claim ownership of the icon assets. Please refer to each provider's terms for permitted usage.
