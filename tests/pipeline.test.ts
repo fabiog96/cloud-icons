@@ -46,45 +46,34 @@ describe("svg-parser", () => {
 });
 
 describe("generated files snapshot", () => {
-  const coreDir = join(import.meta.dirname, "..", "packages", "core", "src", "aws");
-  const reactDir = join(import.meta.dirname, "..", "packages", "react", "src", "aws");
-
-  it("core/aws/ec2.ts matches snapshot", () => {
-    const content = readFileSync(join(coreDir, "ec2.ts"), "utf-8");
-    expect(content).toMatchSnapshot();
-  });
-
-  it("core/aws/lambda.ts matches snapshot", () => {
-    const content = readFileSync(join(coreDir, "lambda.ts"), "utf-8");
-    expect(content).toMatchSnapshot();
-  });
-
-  it("core/aws/simple-storage-service.ts matches snapshot", () => {
-    const content = readFileSync(join(coreDir, "simple-storage-service.ts"), "utf-8");
-    expect(content).toMatchSnapshot();
-  });
+  const reactDir = join(import.meta.dirname, "..", "packages", "react", "src");
 
   it("react/aws/ec2.tsx matches snapshot", () => {
-    const content = readFileSync(join(reactDir, "ec2.tsx"), "utf-8");
+    const content = readFileSync(join(reactDir, "aws", "ec2.tsx"), "utf-8");
     expect(content).toMatchSnapshot();
   });
 
   it("react/aws/lambda.tsx matches snapshot", () => {
-    const content = readFileSync(join(reactDir, "lambda.tsx"), "utf-8");
+    const content = readFileSync(join(reactDir, "aws", "lambda.tsx"), "utf-8");
     expect(content).toMatchSnapshot();
   });
 
-  it("core barrel exports key icons", () => {
-    const barrel = readFileSync(join(coreDir, "index.ts"), "utf-8");
-    expect(barrel).toContain("awsEc2Svg");
-    expect(barrel).toContain("awsLambdaSvg");
-    expect(barrel).toContain("awsSimpleStorageServiceSvg");
-  });
-
-  it("react barrel exports key icons", () => {
-    const barrel = readFileSync(join(reactDir, "index.ts"), "utf-8");
+  it("react aws barrel exports key icons", () => {
+    const barrel = readFileSync(join(reactDir, "aws", "index.ts"), "utf-8");
     expect(barrel).toContain("AwsEc2");
     expect(barrel).toContain("AwsLambda");
     expect(barrel).toContain("AwsSimpleStorageService");
+  });
+
+  it("react azure barrel exports key icons", () => {
+    const barrel = readFileSync(join(reactDir, "azure", "index.ts"), "utf-8");
+    expect(barrel).toContain("AzureAlerts");
+    expect(barrel).toContain("AzureVirtualMachines");
+  });
+
+  it("react gcp barrel exports key icons", () => {
+    const barrel = readFileSync(join(reactDir, "gcp", "index.ts"), "utf-8");
+    expect(barrel).toContain("GcpBigquery");
+    expect(barrel).toContain("GcpComputeEngine");
   });
 });

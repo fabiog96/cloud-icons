@@ -2,22 +2,9 @@
   "release-type": "node",
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
-  "group-pull-request-title-pattern": "chore: release ${version}",
   "packages": {
-    "packages/core": {
-      "component": "core"
-    },
     "packages/react": {
       "component": "react"
-    },
-    "packages/svg": {
-      "component": "svg"
-    }
-  },
-  "linked-versions": {
-    "cloud-icons": {
-      "components": ["core", "react", "svg"],
-      "always-bump": true
     }
   }
 }

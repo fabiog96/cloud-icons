@@ -1,2 +1,0 @@
-export const gcpCloudEndpointsSvg = `<g data-name="Product Icons"><g data-name="colored-32/endpoints"><path d="M15 10H9l-1 2 1 2h6l1-2z" style="fill:#4285f4"/><path d="m16 12-1-2H9l-1 2z" data-name="Shape" style="fill:#aecbfa"/></g><path d="M18 6h-3l3.97 6 1.5-2.25z" style="fill:#4285f4"/><path d="m21.95 12-1.48-2.25-1.5 2.25L15 18h3z" style="fill:#aecbfa"/><path d="M5.95 18h3l-3.97-6-1.5 2.25z" style="fill:#4285f4"/><path d="m2 12 1.48 2.25L4.98 12l3.97-6h-3z" style="fill:#aecbfa"/></g>`;
-export const gcpCloudEndpointsViewBox = "0 0 24 24";

@@ -2,30 +2,28 @@
 
 Cloud architecture icons as tree-shakeable React components.
 
-> AWS icons ready to use — Azure and GCP coming soon.
+> 1716 icons from AWS, Azure, and GCP — ready to use.
 
-## Packages
-
-| Package | Description |
-|---------|-------------|
-| [`@cloud-icons/react`](./packages/react) | React components |
-| [`@cloud-icons/core`](./packages/core) | Framework-agnostic SVG strings |
-| [`@cloud-icons/svg`](./packages/svg) | Optimized SVG files |
-
-## Quick start
+## Install
 
 ```bash
 npm install @cloud-icons/react
 ```
 
+## Quick start
+
 ```tsx
 import { AwsEc2, AwsS3 } from "@cloud-icons/react/aws";
+import { AzureAlerts } from "@cloud-icons/react/azure";
+import { GcpBigquery } from "@cloud-icons/react/gcp";
 
 function App() {
   return (
     <div>
       <AwsEc2 size={48} />
       <AwsS3 size={48} color="#569A31" />
+      <AzureAlerts size={48} />
+      <GcpBigquery size={48} />
     </div>
   );
 }
@@ -55,6 +53,8 @@ Plus all native SVG attributes.
 ```tsx
 // Per provider (recommended)
 import { AwsEc2 } from "@cloud-icons/react/aws";
+import { AzureAlerts } from "@cloud-icons/react/azure";
+import { GcpBigquery } from "@cloud-icons/react/gcp";
 
 // All icons (not recommended for production)
 import { AwsEc2 } from "@cloud-icons/react";
@@ -65,8 +65,8 @@ import { AwsEc2 } from "@cloud-icons/react";
 | Provider | Icons | Import path |
 |----------|-------|-------------|
 | AWS | 795 | `@cloud-icons/react/aws` |
-| Azure | Coming soon | — |
-| GCP | Coming soon | — |
+| Azure | 705 | `@cloud-icons/react/azure` |
+| GCP | 216 | `@cloud-icons/react/gcp` |
 
 ## Development
 
@@ -79,15 +79,6 @@ npm run icons:pipeline
 
 # Build all packages
 npm run build:packages
-```
-
-### Pipeline
-
-```bash
-npm run icons:download    # Download ZIPs from official CDNs
-npm run icons:cleanup     # Normalize filenames
-npm run icons:optimize    # SVGO optimization + prefix IDs
-npm run icons:generate    # Generate TS/TSX/SVG in packages
 ```
 
 ## License

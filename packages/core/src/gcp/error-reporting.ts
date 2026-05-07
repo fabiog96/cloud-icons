@@ -1,2 +1,0 @@
-export const gcpErrorReportingSvg = `<g data-name="Product Icons"><path d="M7 2 2 7v10l5 5h5l-2.5-2.86H8.25l-3.39-3.39v-7.5l3.39-3.39H9.5L12 2zm7.5 0L12 4.86h3.75l3.39 3.39v7.5l-3.39 3.39H12L14.5 22H17l5-5V7l-5-5z" style="fill:#669df6;fill-rule:evenodd"/><path d="m12 17-2.5-2.5L12 12 9.5 9.5 12 7H9.5L7 9.5v5L9.5 17zm2.5-10L12 9.5l2.5 2.5-2.5 2.5 2.5 2.5 2.5-2.5v-5z" style="fill-rule:evenodd;fill:#4285f4"/></g>`;
-export const gcpErrorReportingViewBox = "0 0 24 24";
