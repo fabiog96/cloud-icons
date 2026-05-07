@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.3](https://github.com/fabiog96/cloud-icons/compare/react-v0.0.2...react-v0.0.3) (2026-05-07)
+
+
+### Features
+
+* :fire: simplify to single @cloud-icons/react package ([9bd8f1e](https://github.com/fabiog96/cloud-icons/commit/9bd8f1e86c1f759e670e3065f98042dfcb80a746))
+* simplify to single @cloud-icons/react package ([31829e1](https://github.com/fabiog96/cloud-icons/commit/31829e196b3c73a0827532585227517e23e5c568))
+
 ## [0.0.2](https://github.com/fabiog96/cloud-icons/compare/react-v0.0.1...react-v0.0.2) (2026-05-07)
 
 
