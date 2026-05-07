@@ -1,6 +1,6 @@
 {
   "name": "@cloud-icons/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cloud provider icons — framework-agnostic SVG content and metadata",
   "license": "MIT",
   "type": "module",
