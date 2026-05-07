@@ -3,6 +3,14 @@
   "version": "0.0.2",
   "description": "Cloud provider icons — optimized SVG files",
   "license": "MIT",
+  "author": "fabiog96",
+  "homepage": "https://github.com/fabiog96/cloud-icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabiog96/cloud-icons",
+    "directory": "packages/svg"
+  },
+  "bugs": "https://github.com/fabiog96/cloud-icons/issues",
   "type": "module",
   "sideEffects": false,
   "exports": {
