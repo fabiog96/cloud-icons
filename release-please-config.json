@@ -5,8 +5,7 @@
   "group-pull-request-title-pattern": "chore: release ${version}",
   "packages": {
     "packages/core": {
-      "component": "core",
-      "extra-files": ["../../README.md"]
+      "component": "core"
     },
     "packages/react": {
       "component": "react"
