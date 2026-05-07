@@ -16,7 +16,8 @@
   },
   "linked-versions": {
     "cloud-icons": {
-      "components": ["core", "react", "svg"]
+      "components": ["core", "react", "svg"],
+      "always-bump": true
     }
   }
 }
