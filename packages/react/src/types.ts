@@ -1,6 +1,8 @@
 import type { SVGProps } from "react";
 
+export type IconSize = number | string;
+
 export interface CloudIconProps extends Omit<SVGProps<SVGSVGElement>, "ref"> {
-  size?: number | string;
+  size?: IconSize;
   color?: string;
 }

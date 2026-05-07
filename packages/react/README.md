@@ -48,11 +48,6 @@ All icons accept standard SVG props plus:
 | `@cloud-icons/react/azure` | Microsoft Azure |
 | `@cloud-icons/react/gcp` | Google Cloud Platform |
 
-## Related packages
-
-- [@cloud-icons/core](https://www.npmjs.com/package/@cloud-icons/core) — Framework-agnostic SVG content
-- [@cloud-icons/svg](https://www.npmjs.com/package/@cloud-icons/svg) — Optimized SVG files
-
 ## License
 
 [MIT](../../LICENSE)

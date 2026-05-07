@@ -1,2 +1,0 @@
-export const gcpFirestoreSvg = `<g data-name="Product Icons"><g data-name="colored-32/firestore"><path d="m21 13-9-4v4l9 4Zm0-7-9-4v4l9 4Z" style="fill:#669df6"/><path d="m3 6 9-4v4l-9 4z" style="fill:#aecbfa"/><path d="m3 13 9-4v4l-9 4z" data-name="Rectangle-7" style="fill:#aecbfa"/><path d="m12 18 3.37-1.5 4.51 2L12 22z" data-name="Rectangle-7" style="fill:#4285f4"/></g></g>`;
-export const gcpFirestoreViewBox = "0 0 24 24";

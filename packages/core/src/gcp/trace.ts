@@ -1,2 +1,0 @@
-export const gcpTraceSvg = `<g data-name="Product Icons"><g data-name="colored-32/traces"><path d="M0 0h24v24H0z" style="fill:none"/><path d="M12 14h10v-4H12z" style="fill:#4285f4"/><g data-name="Shape"><path d="M12 22h10v-4H12z" data-name="Fill-1" style="fill:#4285f4"/></g><g data-name="Shape"><path d="M8 22h4v-4H8z" data-name="Fill-1" style="fill:#669df6"/></g></g><path d="M2 2h6v4H2zm0 8h10v4H2z" style="fill:#669df6"/></g>`;
-export const gcpTraceViewBox = "0 0 24 24";
