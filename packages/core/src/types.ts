@@ -13,3 +13,5 @@ export interface IconEntry {
   viewBox: string;
   metadata: IconMetadata;
 }
+
+export type IconSize = number | string;
