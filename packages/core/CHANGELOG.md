@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/fabiog96/cloud-icons/compare/core-v0.0.2...core-v0.0.3) (2026-05-07)
+
+
+### Features
+
+* add IconSize type and update exports in index.ts ([c40bbdd](https://github.com/fabiog96/cloud-icons/commit/c40bbdda9afaacddc993398a0f21c4f8467c0a20))
+
 ## [0.0.2](https://github.com/fabiog96/cloud-icons/compare/core-v0.0.1...core-v0.0.2) (2026-05-07)
 
 
